@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/results-page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -6,6 +7,7 @@ import 'custom-gender.dart';
 import 'gender-enum.dart';
 import 'constants.dart';
 import 'custom-FAB.dart';
+import 'results-page.dart';
 
 class InputPage extends StatefulWidget {
   @override
@@ -198,10 +200,27 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          Container(
-            color: Color(0xFFEB1555),
-            width: double.infinity,
-            height: buttonHeight,
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Results(),
+                ),
+              );
+            },
+            child: Container(
+              padding: EdgeInsets.only(bottom: 10),
+              child: Center(
+                child: Text(
+                  'احسبها',
+                  style: numberStyle,
+                ),
+              ),
+              color: Color(0xFFEB1555),
+              width: double.infinity,
+              height: buttonHeight,
+            ),
           )
         ],
       ),

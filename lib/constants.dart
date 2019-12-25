@@ -13,3 +13,8 @@ const numberStyle = TextStyle(
     fontSize: 40,
     fontWeight: FontWeight.w900
 );
+
+const resultsStyle= TextStyle(
+  fontSize: 50,
+  fontWeight: FontWeight.bold
+);
